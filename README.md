@@ -72,28 +72,28 @@ We also provide a Tensorflow implementation so that you can try to generate the 
 Use **--help** to get a list of all the commands.
 
 ```
-build/MAERI_Mapper --help
+./MAERI_Mapper --help
 
 ```
 You can see the architecture of MAERI (32 MSes in this example) under different scales by typing command
 
 ```
-build/MAERI_Mapper -show_maei num_ms=32
+./MAERI_Mapper -show_maei num_ms=32
 
 ```
 
 If you want to understand the impact of mapping over MAERI, example below is the command of mapping a convolutional layer of alexnet, and generating the profile result for this layer
 
 ```
-1. cd mNRA/input/alexnet
-2. ../../build/MAERI_Mapper -model_para="Model_parameter_4.txt" -show_energy 
+1. cd mRNA/input/alexnet
+2. ../../MAERI_Mapper -model_para="Model_parameter_4.txt" -show_energy 
                             -config_file="Config_file.txt" -num_ms=256 -dn_bw=128 -rn_bw=256 
                             -performance
 ```
 If you want to generate the configuration, you should add **-genconfig** option in the commmand.
 
 ```
-../../build/MAERI_Mapper -model_para="Model_parameter_2.txt" -show_energy 
+../../MAERI_Mapper -model_para="Model_parameter_2.txt" -show_energy 
                          -config_file="Config_file.txt" -dn_bw=128 -rn_bw=256 
                          –performance -genconfig
 ```
